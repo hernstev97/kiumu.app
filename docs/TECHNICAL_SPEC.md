@@ -42,33 +42,25 @@
 - **Sicherheit:** Row Level Security (RLS) muss von Anfang an aktiv sein, damit
   jeder Nutzer nur seine eigenen Daten sieht. Mehr dazu in Abschnitt 5.
 
-## 3. Datenmodell — ⏳ NOCH ZU DEFINIEREN (nächster Schritt)
+## 3. Datenmodell — ⏳ NOCH ZU DEFINIEREN (nächster Schritt: Spalten definieren)
 
-> Dies ist der **nächste inhaltliche Arbeitsschritt** und zugleich der erste
-> bewusste „unter die Haube schauen"-Moment. Hier wird aus der Produktidee ein
-> Satz konkreter Tabellen.
+> Die Grundsatzentscheidungen zum Modell sind gefallen (siehe ADR-0009 und ADR-0010).
+> Der **nächste Schritt** ist das Finalisieren der vollständigen Spalten-/Typen-Tabelle.
 
-Voraussichtliche Entitäten (Arbeitsstand, noch nicht final):
+Beschlossene Entitäten auf Entscheidungs-Ebene:
 
-- **users** — von Supabase Auth bereitgestellt (Profile ggf. ergänzend).
+- **users** — von Supabase Auth bereitgestellt.
 - **habits** — die Gewohnheiten eines Nutzers.
-- **habit_entries** (Tracking-Einträge) — pro Gewohnheit und Tag: erfüllt/nicht.
-- **wallet / points** — der Punkte-Kontostand (oder aus Einträgen berechnet?).
+- **habit_entries** (Tracking-Einträge) — pro Gewohnheit und Tag: erfüllt/nicht (jede erfüllte = 1 Punkt).
 - **goals** — Ziele mit Name, Beschreibung, Preis.
-- **investments** — investierte Punkte pro Ziel (für „Schritt für Schritt").
-- **goal_habits** — Verknüpfung Ziel ↔ Gewohnheit(en) (für späteres Earmarking).
+- **investments** — investierte Punkte (append-only Kontobuch-Einträge).
 
-Offene Modellierungsfragen (hier entscheiden wir gemeinsam):
+Zentrale Modellierungs-Entscheidungen (aufgelöste Fragen):
+- **Punktestand (Saldo):** Wird **berechnet** (Summe verdienter Punkte − Summe Investitionen). Es gibt **keine** `wallet`-Tabelle.
+- **Investitionen:** Sind ein append-only Kontobuch. Eine Investition bewegt Punkte. Rückholungen sind Gegenbuchungen.
+- **Ziele:** Haben einen Ereignis-Zeitstempel (z. B. `purchased_at`), wenn der Preis gedeckt ist.
 
-- Ist der Punktestand ein **gespeicherter Wert** oder wird er aus den Einträgen
-  **berechnet**? (Klassischer Trade-off: Einfachheit vs. Konsistenz.)
-- Wie wird „investiert" abgebildet, sodass nichts doppelt zählt und der
-  Geldbörsen-Saldo immer stimmt?
-- Welche Beziehungen sind 1:n, welche n:m?
-- Welche Felder braucht jede Tabelle minimal für Phase 1?
-
-→ Sobald entschieden: hier als Tabellen mit Spalten, Typen und Beziehungen
-dokumentieren und eine entsprechende ADR in [DECISIONS.md](DECISIONS.md) anlegen.
+→ Sobald die Felder/Spalten pro Tabelle finalisiert sind, werden sie hier als Tabellen mit Typen und Beziehungen dokumentiert.
 
 ## 4. API / Datenzugriff — ⏳ NOCH ZU DEFINIEREN
 

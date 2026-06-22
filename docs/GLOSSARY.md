@@ -14,12 +14,15 @@
 | **Preis / Goal Price** | Anzahl Punkte, die ein Ziel kostet bzw. die zum Erreichen nötig sind. |
 | **Investieren / Investment** | Punkte aus der Geldbörse einem Ziel zuführen. Investierte Punkte sind ausgegeben — sie verlassen die Geldbörse. |
 | **Fortschritt / Progress** | Wie nah ein Ziel an seinem Preis ist (Summe der bisher investierten Punkte). |
-| **Schritt-für-Schritt-Kauf** | Kauf-Variante: Punkte fließen nach und nach in ein Ziel; Fortschritt wächst laufend. *(Variante für V1.)* |
-| **Ansparen-Kauf** | Kauf-Variante: Ein Ziel kann erst bei vollem Preis „gekauft" werden. *(Später.)* |
+| **Kontobuch / Ledger** | Append-only Tabelle für Investitionen. Bewegt Punkte zwischen Geldbörse und Zielen. |
+| **Gegenbuchung** | Rückholung von investierten Punkten in die Geldbörse, anstatt Daten zu löschen. |
+| **Schritt-für-Schritt-Kauf** | Kauf-Nutzerverhalten: Punkte fließen nach und nach in ein Ziel. |
+| **Ansparen-Kauf** | Kauf-Nutzerverhalten: Ein Ziel wird erst bei vollem Preis mit einer Investition „gekauft". Technisch gleich zum Schritt-für-Schritt-Kauf. |
 | **Streak** | Anzahl aufeinanderfolgender Tage, an denen eine Gewohnheit erfüllt wurde. Darf brechen — **ohne** Strafe. |
-| **Earmarking** | Optionale Regel, dass für ein Ziel nur Punkte aus bestimmten Gewohnheiten zählen (z. B. „nur Geschirr-Punkte fürs Spiel"). *(Später.)* |
+| **Earmarking** | Optionale Regel, dass für ein Ziel nur Punkte aus bestimmten Gewohnheiten zählen. *(Später.)* |
+| **Tier / Stufe** | Ein Ziel mit mehreren Preisstufen. Fortschritt zählt über Stufen hinweg weiter. *(Später.)* |
 | **Kein-Bestrafungs-Prinzip** | Leitprinzip: ein nicht geschaffter Tag kostet keine Punkte und wirft den Ziel-Fortschritt nicht zurück. |
-| **Geldbörsen-Modell** | Grundmodell: Punkte sind ausgebbares Guthaben (Gegenteil: Zähler-Modell). Siehe DECISIONS ADR-0002. |
+| **Geldbörsen-Modell** | Grundmodell: Punkte sind ausgebbares Guthaben. Punktestand wird berechnet. Siehe DECISIONS ADR-0002. |
 | **Dogfooding** | Der Entwickler nutzt die eigene App im echten Alltag — bewusster Teil des Plans. |
 
 > Technische Tabellennamen (z. B. `habits`, `habit_entries`, `goals`,

@@ -138,6 +138,22 @@
 - **Konsequenzen:** Inhaltliche Agenten-Anweisungen immer in AGENTS.md pflegen.
   CLAUDE.md bleibt minimal (nur Claude-spezifische Abweichungen, falls überhaupt).
 
+## ADR-0009 — Punktestand berechnet statt gespeichert (Kontobuch-Modell)
+- **Datum:** 2026-06-22
+- **Status:** Aktiv
+- **Kontext:** Soll der Punktestand (Geldbörse) als fester Wert gespeichert oder aus Transaktionen berechnet werden?
+- **Entscheidung:** Der Punktestand wird berechnet. Es gibt keine `wallet`-Tabelle. Saldo = (Summe verdienter Punkte aus `habit_entries`) − (Summe aller `investments`). Jede an einem Tag erfüllte Gewohnheit bringt 1 Punkt. Doppelzählungen werden durch einen Eindeutigkeits-Index auf (Gewohnheit, Tag) verhindert.
+- **Begründung:** Bietet eine Single Source of Truth (SSOT), der Stand kann nicht durch Fehler asynchron driften. In Phase 1 ist Performance unkritisch. Es schult das saubere Kontobuch-Denken.
+- **Konsequenzen:** Geldbörsensaldo muss bei Aufruf aggregiert werden. Die Speicherung von Tracking-Einträgen und Investitionen wird die einzige Basis für Punkte.
+
+## ADR-0010 — Investitionen als append-only Kontobuch; Rückholung als Gegenbuchung; Ziel-Lösch-Regeln
+- **Datum:** 2026-06-22
+- **Status:** Aktiv
+- **Kontext:** Wie werden Investitionen getätigt und was passiert, wenn Punkte zurückgeholt oder Ziele gelöscht werden sollen? Auch die Kauf-Variante bedarf Klarheit (Präzisierung von ADR-0003).
+- **Entscheidung:** Investieren ist ein append-only Kontobuch (Ledger). Eine Investition bewegt Punkte. "Schritt für Schritt investieren" und "Ansparen" sind technisch derselbe Mechanismus. Eine Investition wird in V1 beim Zielpreis gedeckelt. Ziele erhalten einen Ereignis-Zeitstempel (`purchased_at`) statt eines gespeicherten Saldos. Zurückholen von Punkten geschieht **nur** über Gegenbuchungen, niemals durch Löschen von Daten. Ziel-Lösch-Regeln greifen basierend auf investierten Punkten und Abschluss-Status.
+- **Begründung:** Im Sinne der Daten-Integrität werden Daten nicht gelöscht (append-only). Dies verhindert das Kein-Bestrafungs-Prinzip (ADR-0005) zu verletzen und wahrt die Historie.
+- **Konsequenzen:** Präzisiert ADR-0003 (eine einheitliche Mechanik) und unterstützt ADR-0005.
+
 ---
 
 ## Vorlage für neue Einträge (kopieren)

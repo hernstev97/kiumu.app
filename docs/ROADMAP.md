@@ -63,6 +63,7 @@ Erst wenn eine Kernschleife existiert, die der Entwickler liebt.
 
 - Bezahlmodell / Premium-Funktionen (erklärtes Fernziel).
 - Abzeichen/Meilensteine, soziale Funktionen.
+- Tier-/Stufen-System für Ziele.
 
 ---
 

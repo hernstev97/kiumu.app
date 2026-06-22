@@ -16,23 +16,16 @@
 
 ## 🎯 Aktueller Fokus
 
-Dokumentations-Fundament steht. Der nächste inhaltliche Schritt ist das
-**Datenmodell für Phase 1** — der erste bewusste „unter die Haube schauen"-Moment,
-in dem aus der Produktidee konkrete Tabellen werden.
+Die Grundsatzentscheidungen des Datenmodells (Kontobuch-Ansatz, berechneter Saldo) stehen. Der nächste Schritt ist das Finalisieren der **Felder und Spalten pro Tabelle**.
 
 ## ⏭️ Nächste konkrete Schritte
 
-1. Datenmodell gemeinsam entwerfen (Entitäten, Felder, Beziehungen) — siehe offene
-   Fragen in [TECHNICAL_SPEC.md](TECHNICAL_SPEC.md), Abschnitt 3.
-2. Entscheidung „Punktestand gespeichert vs. berechnet" treffen → als ADR festhalten.
-3. Projekt scaffolden (Next.js + TypeScript), Git/GitHub aufsetzen.
-4. Supabase-Projekt anlegen; Tabellen + Row Level Security für das Datenmodell.
+1. Felder/Spalten pro Tabelle finalisieren (Entitäten, Datentypen, Beziehungen).
+2. Projekt scaffolden (Next.js + TypeScript), Git/GitHub aufsetzen.
+3. Supabase-Projekt anlegen; Tabellen + Row Level Security für das Datenmodell.
 
 ## ❓ Offene Fragen (entscheiden, bevor sie blockieren)
 
-- Punktestand: gespeicherter Wert oder aus den Tracking-Einträgen berechnet?
-- Wie wird „investiert" sauber abgebildet (Saldo stimmt immer, nichts zählt doppelt)?
-- Was passiert mit investierten Punkten, wenn ein Ziel gelöscht/geändert wird?
 - Wie wird das tägliche Investieren visualisiert (Balken, Schritte, …)?
 - Produktname (Arbeitstitel „Habit Tracker" ersetzen).
 
@@ -46,6 +39,11 @@ in dem aus der Produktidee konkrete Tabellen werden.
 
 > Pro Session ein kurzer Eintrag: erledigt / als Nächstes / offen. Das ist die
 > Brotkrumen-Spur, der dein zukünftiges Ich zurück in den Kontext folgt.
+
+### 2026-06-22 — Datenmodell-Grundsatzentscheidungen
+- **Erledigt:** Offene Modellierungsfragen aus TECHNICAL_SPEC aufgelöst. Festgelegt: berechneter Kontostand statt Speicherung, Investieren als append-only Kontobuch, Rückholung als Gegenbuchung. Ziel-Lösch-Regeln definiert.
+- **Als Nächstes:** Felder und Spalten pro Tabelle finalisieren.
+- **Offen:** Visualisierung der Investition im UI, Namensfindung.
 
 ### 2026-06-22 — Projekt-Kickoff
 - **Erledigt:** Idee geschärft; Geldbörsen-Modell festgelegt; Stack entschieden

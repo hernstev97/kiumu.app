@@ -115,6 +115,7 @@ Begründung und geplante Reihenfolge: [DECISIONS.md](DECISIONS.md) → ADR-0003.
 - Historie & Graphen (Fortschritt pro Gewohnheit über Zeit, Punkte pro Tag).
 - Erinnerungen, Abzeichen, Gruppen-Challenges, soziales Element.
 - Virtuelle Belohnungen / Anpassungsoptionen, für die Punkte ausgegeben werden.
+- **Tier-/Stufen-System für Ziele:** Ein Ziel mit mehreren Preisstufen (Fortschritt zählt weiter, ab der ersten Stufe einlösbar).
 
 ## 7. Hauptfunktionen (Gesamtbild, über alle Phasen)
 
@@ -135,9 +136,10 @@ relevant werden:
   anderes)? Dieses Feedback ist motivational zentral.
 - Wie flexibel müssen Änderungen an Gewohnheiten/Zielen sein, ohne den
   Fortschritt zu zerstören?
-- Was passiert mit bereits investierten Punkten, wenn ein Ziel gelöscht oder
-  geändert wird?
-- Soll die Kauf-Variante global, pro Nutzer oder pro Ziel einstellbar sein?
+
+*(Bereits entschieden:)*
+- **Gelöschte Ziele:** Ziel ohne Punkte -> frei löschbar. Abgeschlossenes Ziel -> frei löschbar (keine Rückzahlung). Ziel mit investierten Punkten -> erst Punkte zurückholen (Gegenbuchung), dann löschbar.
+- **Kauf-Variante:** "Schritt für Schritt investieren" und "Ansparen" sind technisch derselbe append-only Kontobuch-Mechanismus (nur unterschiedliches Nutzerverhalten). Eine Investition ist gedeckelt beim Zielpreis.
 
 ## 9. Erfolgskriterien
 
