@@ -11,7 +11,7 @@
 
 ## Projektüberblick
 
-Gamifizierter Habit-Tracker mit Punkte-Ökonomie: Gewohnheiten erfüllen → Punkte in
+Kiumu — gamifizierter Habit-Tracker mit Punkte-Ökonomie: Gewohnheiten erfüllen → Punkte in
 einer Geldbörse verdienen → Punkte für selbst gesetzte Ziele ausgeben. Lern- und
 Produktprojekt eines (wieder einsteigenden, Frontend-orientierten) Solo-Entwicklers.
 Vollständige Produktbeschreibung: [docs/PRD.md](docs/PRD.md).

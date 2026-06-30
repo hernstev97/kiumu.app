@@ -1,4 +1,4 @@
-# Product Requirements Document (PRD) — Habit Tracker
+# Product Requirements Document (PRD) — Kiumu
 
 > Was bauen wir, für wen, und woran erkennen wir Erfolg.
 > Dieses Dokument beschreibt das **Produkt**, nicht die Technik (die steht in
@@ -7,8 +7,8 @@
 | | |
 |---|---|
 | **Status** | Lebendiger Entwurf |
-| **Letzte Aktualisierung** | 2026-06-22 |
-| **Produktname** | offen (Arbeitstitel „Habit Tracker") |
+| **Letzte Aktualisierung** | 2026-06-30 |
+| **Produktname** | Kiumu |
 
 ---
 

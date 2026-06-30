@@ -8,7 +8,7 @@
 
 | | |
 |---|---|
-| **Letzte Aktualisierung** | 2026-06-22 |
+| **Letzte Aktualisierung** | 2026-06-30 |
 | **Aktuelle Phase** | Phase 0 — Fundament (siehe [ROADMAP.md](ROADMAP.md)) |
 | **Aktueller Branch** | – (noch kein Code-Repo initialisiert) |
 
@@ -27,7 +27,6 @@ Die Grundsatzentscheidungen des Datenmodells (Kontobuch-Ansatz, berechneter Sald
 ## ❓ Offene Fragen (entscheiden, bevor sie blockieren)
 
 - Wie wird das tägliche Investieren visualisiert (Balken, Schritte, …)?
-- Produktname (Arbeitstitel „Habit Tracker" ersetzen).
 
 ## 🚧 Bekannte Probleme / Stolpersteine
 
@@ -39,6 +38,11 @@ Die Grundsatzentscheidungen des Datenmodells (Kontobuch-Ansatz, berechneter Sald
 
 > Pro Session ein kurzer Eintrag: erledigt / als Nächstes / offen. Das ist die
 > Brotkrumen-Spur, der dein zukünftiges Ich zurück in den Kontext folgt.
+
+### 2026-06-30 — Produktname „Kiumu" (ADR-0011)
+- **Erledigt:** Arbeitstitel „Habit Tracker" / Repo-Codename `habit-tracker` in der Doku durch Kiumu ersetzt (README, PRD, GLOSSARY, ROADMAP, TECHNICAL_SPEC, DESIGN, AGENTS, STATUS).
+- **Als Nächstes:** Felder und Spalten pro Tabelle finalisieren.
+- **Offen:** Visualisierung der Investition im UI.
 
 ### 2026-06-22 — Datenmodell-Grundsatzentscheidungen
 - **Erledigt:** Offene Modellierungsfragen aus TECHNICAL_SPEC aufgelöst. Festgelegt: berechneter Kontostand statt Speicherung, Investieren als append-only Kontobuch, Rückholung als Gegenbuchung. Ziel-Lösch-Regeln definiert.

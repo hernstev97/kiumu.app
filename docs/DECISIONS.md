@@ -154,6 +154,69 @@
 - **Begründung:** Im Sinne der Daten-Integrität werden Daten nicht gelöscht (append-only). Dies verhindert das Kein-Bestrafungs-Prinzip (ADR-0005) zu verletzen und wahrt die Historie.
 - **Konsequenzen:** Präzisiert ADR-0003 (eine einheitliche Mechanik) und unterstützt ADR-0005.
 
+
+## ADR-0011 — Produktname: „Kiumu" (Kunstwort)
+- **Datum:** 2026-06-30
+- **Status:** Aktiv
+- **Kontext:** Der Arbeitstitel „Habit Tracker" musste durch einen echten
+  Produktnamen ersetzt werden (offene Frage seit Kickoff). Randbedingungen:
+  möglichst englisch (App-Store, internationale Skalierung, Stack-Sprachraum);
+  **keine** Wortspiele mit „habit" oder „track" (Namensfeld übersättigt, Domains
+  und Store-Namen praktisch alle vergeben).
+- **Entscheidung:** Der Name ist **Kiumu** — ein erfundenes Wort ohne
+  Wörterbuch-Bedeutung, **abgeleitet von „Cumulus"**. Aussprache festgelegt auf
+  **„kju-mu"**. Domain `kiumu.app` ist gesichert (über Vercel registriert,
+  ~12 $ im ersten Jahr, danach 15 $); passt nativ zum Next.js-/Vercel-Setup.
+  Instagram-Handle gesichert; weitere Socials folgen.
+- **Begründung:**
+  - *Herkunft (aus dem Design entstanden):* Abgeleitet von „Cumulus"
+    (Haufenwolke; Wortwurzel von „accumulate" — passt zum Anhäufen von Punkten in
+    der Geldbörse). Auslöser war die konkrete Beobachtung, dass die Habit-Ansicht
+    aussieht wie helle Wolken vor einem dunkelblauen Nachthimmel. „Kiumu" verdichtet
+    diese Cumulus-Idee zu einem eigenständigen, kürzeren Kunstwort und trägt damit
+    Optik und Mechanik in *einem* Namen.
+  - *Einzigartigkeit & Ownability:* Als Kunstwort ist „Kiumu" markenrechtlich frei
+    (DPMA-Recherche negativ) und SEO-sauber — eine Suche nach „kiumu" führt direkt
+    zum Produkt, ohne Konkurrenz durch fremde Treffer. Genau das löst die Schwäche
+    bedeutungstragender Wörter (s. u. Cumulus): „Cumulus" selbst ist generisch und
+    überlaufen, „Kiumu" behält die Assoziation, ohne den Ballast.
+  - *Klang passt zum Produkt:* weiche, vokallastige Laute ohne harte Konsonanten —
+    stimmig zum straffreien, wertschätzenden Ton (ADR-0005).
+  - *Cross-Language-Check unbedenklich:* keine anstößige Bedeutung in größeren
+    Sprachen; existiert lediglich als harmloser Ortsname in Ostafrika
+    (Uganda/Kenia). Angenehme klangliche Nachbarn: jap. *kumo* = „Wolke" (stützt die
+    Wolken-Herkunft sogar), haw. *kumu* = „Quelle/Lehrer/Fundament".
+  - *`kiumu.com` ist vergeben, aber leer/geparkt* — kein aktives Produkt, kein
+    Wettbewerber, keine Verwechslungsgefahr.
+- **Konsequenzen:**
+  - Platzhalter „Produktname offen / Arbeitstitel Habit Tracker" in README, PRD,
+    GLOSSARY, STATUS und ROADMAP durch „Kiumu" ersetzt. Repo-Codename
+    `habit-tracker` → `kiumu` umgestellt (noch kein Code → schmerzfrei).
+    GitHub-Org/Handle `kiumu` sichern.
+  - *Aussprache „kju-mu" konsequent vorgeben* (z. B. in README/Marketing), da ein
+    Kunstwort nicht selbsterklärend ist — sonst entscheidet der Markt die Aussprache.
+  - *Kunstwort-Tax bewusst akzeptiert:* Das Wort trägt keine eigene Bedeutung →
+    Bedeutung muss über Produkt und Design aufgebaut werden (die Cumulus-/Wolken-
+    Herkunft liefert dafür den roten Faden, u. a. für DESIGN.md ab Phase 2).
+  - **Förmliche Markeneintragung (DPMA/EUIPO) bewusst aufgeschoben** auf eine
+    spätere „ernsthaftes Produkt"-Phase (analog ROADMAP Phase 4). Die negative
+    DPMA-Recherche genügt für Phase 0; eine Eintragung kostet echtes Geld und ist
+    jetzt verfrüht.
+  - **Verworfene Alternativen:**
+    - *Wortspiele mit habit/track* (z. B. „Habit-at", „Track-tor"): übersättigt,
+      Domains/Store-Namen vergeben — von vornherein ausgeschlossen.
+    - *Cumulus (direkt):* bedeutungsstark und atmosphärisch (Wolken-Optik der
+      Habit-Ansicht, „accumulate"), aber generisch und SEO-überlaufen
+      (Wetter-Software, US-Radio, Storage-Umfeld); `.com` weg, `.app` nur
+      geparkt/teuer zu kaufen. → Daher die Ableitung „Kiumu" statt „Cumulus" selbst.
+    - *Cumula:* `cumula.app` bereits von einer konkurrierenden Lern-App belegt —
+      zu nahe am eigenen Feld.
+    - *qmulo:* klanglich identisch zu **Qumulo**, einer ~346 Mio. $ schweren
+      Storage-Firma mit eingetragener Marke und DE-/EMEA-Präsenz → Verwechslungs-
+      und Abmahn-Risiko.
+    - *Kumulus / Kumulos u. ä. Schreibvarianten:* mehrfach vergeben; zusätzlich
+      Buchstabier-Reibung („mit K", „qm").
+
 ---
 
 ## Vorlage für neue Einträge (kopieren)
