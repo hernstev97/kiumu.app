@@ -10,19 +10,22 @@
 |---|---|
 | **Letzte Aktualisierung** | 2026-07-01 |
 | **Aktuelle Phase** | Phase 0 — Fundament (siehe [ROADMAP.md](ROADMAP.md)) |
-| **Aktueller Branch** | `main` |
+| **Aktueller Branch** | `develop` (tägliche Arbeit; Merge nach `main` wenn getestet) |
 
 ---
 
 ## 🎯 Aktueller Fokus
 
-Das Next.js-Scaffold steht: TypeScript, App Router, Tailwind CSS und ESLint sind eingerichtet. Der nächste Schritt ist, die generierte Startseite/Metadaten auf kiumu umzubauen und danach die **Felder und Spalten pro Tabelle** zu finalisieren.
+Preview-Schutz steht: handgemachte Middleware + Login-Seite schützen Preview-Deploys
+(`develop`); Production (`main`) bleibt ohne Gate offen. Als Nächstes: Starter-UI/Metadaten
+auf kiumu anpassen, dann Datenmodell finalisieren.
 
 ## ⏭️ Nächste konkrete Schritte
 
-1. Generierte Next.js-Startseite und Metadaten auf kiumu anpassen.
-2. Felder/Spalten pro Tabelle finalisieren (Entitäten, Datentypen, Beziehungen).
-3. Supabase-Projekt anlegen; Tabellen + Row Level Security für das Datenmodell.
+1. Preview auf Vercel einmal live testen (Deploy von `develop` → Login → Home).
+2. Generierte Next.js-Startseite und Metadaten auf kiumu anpassen.
+3. Felder/Spalten pro Tabelle finalisieren (Entitäten, Datentypen, Beziehungen).
+4. Supabase-Projekt anlegen; Tabellen + Row Level Security für das Datenmodell.
 
 ## ❓ Offene Fragen (entscheiden, bevor sie blockieren)
 
@@ -30,7 +33,7 @@ Das Next.js-Scaffold steht: TypeScript, App Router, Tailwind CSS und ESLint sind
 
 ## 🚧 Bekannte Probleme / Stolpersteine
 
-- Keine bekannten Projektprobleme; `npm run lint` und `npm run build` laufen erfolgreich.
+- Keine bekannten Projektprobleme. Preview-Gate lokal mit `.env.local` getestet; Vercel Preview-Env-Var gesetzt — Live-Check auf Preview-URL noch ausstehend.
 
 ---
 
@@ -38,6 +41,16 @@ Das Next.js-Scaffold steht: TypeScript, App Router, Tailwind CSS und ESLint sind
 
 > Pro Session ein kurzer Eintrag: erledigt / als Nächstes / offen. Das ist die
 > Brotkrumen-Spur, der dein zukünftiges Ich zurück in den Kontext folgt.
+
+### 2026-07-01 — Preview-Passwortschutz (fertig)
+- **Erledigt:** Handgemachter Preview-Gate ohne Vercel Paid: `src/middleware.ts` (Redirect, Cookie-Check, `matcher` für Static Assets), `src/app/login/` (Seite + Server Action), `.env.example`. Lokal mit `.env.local` getestet. `PREVIEW_PASSWORD` in Vercel nur für Preview gesetzt. Branch-Workflow: `develop` = Arbeit + Preview, `main` = Production ohne Gate.
+- **Als Nächstes:** Preview-Deploy auf Vercel live durchklicken; danach Starter-UI/Metadaten auf kiumu anpassen.
+- **Offen (optional, nicht blockierend):** Preview-Subdomain explizit an `develop` koppeln; Fehlermeldung bei falschem Passwort; Logout/Cookie-Ablauf; Merge `develop` → `main` wenn Preview stabil.
+
+### 2026-07-01 — Branch-Workflow + Preview-Middleware (Lernen)
+- **Erledigt:** Branch `develop` angelegt und als aktiver Arbeitsbranch etabliert; `main` = Production. Middleware-Konzept und Login-Flow selbst implementiert (Lern-Session).
+- **Als Nächstes:** siehe Eintrag „Preview-Passwortschutz (fertig)" oben.
+- **Offen:** — (inzwischen erledigt bzw. optional)
 
 ### 2026-07-01 — Next.js-Scaffold
 - **Erledigt:** Next.js-App mit TypeScript, App Router, Tailwind CSS und ESLint erstellt. Struktur und Scripts geprüft; `npm run lint` und `npm run build` laufen erfolgreich.
