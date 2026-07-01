@@ -1,4 +1,4 @@
-# Product Requirements Document (PRD) — Kiumu
+# Product Requirements Document (PRD) — kiumu
 
 > Was bauen wir, für wen, und woran erkennen wir Erfolg.
 > Dieses Dokument beschreibt das **Produkt**, nicht die Technik (die steht in
@@ -8,7 +8,7 @@
 |---|---|
 | **Status** | Lebendiger Entwurf |
 | **Letzte Aktualisierung** | 2026-06-30 |
-| **Produktname** | Kiumu |
+| **Produktname** | kiumu |
 
 ---
 

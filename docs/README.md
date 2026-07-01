@@ -1,10 +1,10 @@
-# Kiumu
+# kiumu
 
 > Ein gamifizierter Habit-Tracker mit Punkte-Ökonomie. Du erfüllst Gewohnheiten,
 > verdienst Punkte und gibst sie für selbst gesetzte Ziele aus. Lern- und
 > Produktprojekt zugleich.
 
-**Produktname:** Kiumu (Aussprache „kju-mu"). Repo: `kiumu`, Domain: `kiumu.app`.
+**Produktname:** kiumu (Aussprache „kju-mu"). Repo: `kiumu`, Domain: `kiumu.app`.
 
 ---
 

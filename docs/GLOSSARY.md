@@ -1,4 +1,4 @@
-# Glossar — Begriffe in Kiumu
+# Glossar — Begriffe in kiumu
 
 > Damit Begriffe nach einer Pause (und für jede KI) dieselbe Bedeutung behalten.
 > Wenn ein Begriff im Code, in der UI oder in Gesprächen anders verwendet wird als

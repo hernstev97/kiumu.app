@@ -39,8 +39,8 @@ Die Grundsatzentscheidungen des Datenmodells (Kontobuch-Ansatz, berechneter Sald
 > Pro Session ein kurzer Eintrag: erledigt / als Nächstes / offen. Das ist die
 > Brotkrumen-Spur, der dein zukünftiges Ich zurück in den Kontext folgt.
 
-### 2026-06-30 — Produktname „Kiumu" (ADR-0011)
-- **Erledigt:** Arbeitstitel „Habit Tracker" / Repo-Codename `habit-tracker` in der Doku durch Kiumu ersetzt (README, PRD, GLOSSARY, ROADMAP, TECHNICAL_SPEC, DESIGN, AGENTS, STATUS).
+### 2026-06-30 — Produktname „kiumu" (ADR-0011)
+- **Erledigt:** Arbeitstitel „Habit Tracker" / Repo-Codename `habit-tracker` in der Doku durch kiumu ersetzt (README, PRD, GLOSSARY, ROADMAP, TECHNICAL_SPEC, DESIGN, AGENTS, STATUS).
 - **Als Nächstes:** Felder und Spalten pro Tabelle finalisieren.
 - **Offen:** Visualisierung der Investition im UI.
 

@@ -1,4 +1,4 @@
-# Design-Sprache — Kiumu
+# Design-Sprache — kiumu
 
 > Wie die App aussieht und sich anfühlt. **Noch weitgehend leer** — die Design-
 > Sprache wird ab Phase 2 erarbeitet (siehe [ROADMAP.md](ROADMAP.md)). Diese Datei

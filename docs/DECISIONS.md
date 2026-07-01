@@ -155,7 +155,7 @@
 - **Konsequenzen:** Präzisiert ADR-0003 (eine einheitliche Mechanik) und unterstützt ADR-0005.
 
 
-## ADR-0011 — Produktname: „Kiumu" (Kunstwort)
+## ADR-0011 — Produktname: „kiumu" (Kunstwort)
 - **Datum:** 2026-06-30
 - **Status:** Aktiv
 - **Kontext:** Der Arbeitstitel „Habit Tracker" musste durch einen echten
@@ -163,7 +163,7 @@
   möglichst englisch (App-Store, internationale Skalierung, Stack-Sprachraum);
   **keine** Wortspiele mit „habit" oder „track" (Namensfeld übersättigt, Domains
   und Store-Namen praktisch alle vergeben).
-- **Entscheidung:** Der Name ist **Kiumu** — ein erfundenes Wort ohne
+- **Entscheidung:** Der Name ist **kiumu** — ein erfundenes Wort ohne
   Wörterbuch-Bedeutung, **abgeleitet von „Cumulus"**. Aussprache festgelegt auf
   **„kju-mu"**. Domain `kiumu.app` ist gesichert (über Vercel registriert,
   ~12 $ im ersten Jahr, danach 15 $); passt nativ zum Next.js-/Vercel-Setup.
@@ -172,14 +172,14 @@
   - *Herkunft (aus dem Design entstanden):* Abgeleitet von „Cumulus"
     (Haufenwolke; Wortwurzel von „accumulate" — passt zum Anhäufen von Punkten in
     der Geldbörse). Auslöser war die konkrete Beobachtung, dass die Habit-Ansicht
-    aussieht wie helle Wolken vor einem dunkelblauen Nachthimmel. „Kiumu" verdichtet
+    aussieht wie helle Wolken vor einem dunkelblauen Nachthimmel. „kiumu" verdichtet
     diese Cumulus-Idee zu einem eigenständigen, kürzeren Kunstwort und trägt damit
     Optik und Mechanik in *einem* Namen.
-  - *Einzigartigkeit & Ownability:* Als Kunstwort ist „Kiumu" markenrechtlich frei
+  - *Einzigartigkeit & Ownability:* Als Kunstwort ist „kiumu" markenrechtlich frei
     (DPMA-Recherche negativ) und SEO-sauber — eine Suche nach „kiumu" führt direkt
     zum Produkt, ohne Konkurrenz durch fremde Treffer. Genau das löst die Schwäche
     bedeutungstragender Wörter (s. u. Cumulus): „Cumulus" selbst ist generisch und
-    überlaufen, „Kiumu" behält die Assoziation, ohne den Ballast.
+    überlaufen, „kiumu" behält die Assoziation, ohne den Ballast.
   - *Klang passt zum Produkt:* weiche, vokallastige Laute ohne harte Konsonanten —
     stimmig zum straffreien, wertschätzenden Ton (ADR-0005).
   - *Cross-Language-Check unbedenklich:* keine anstößige Bedeutung in größeren
@@ -190,7 +190,7 @@
     Wettbewerber, keine Verwechslungsgefahr.
 - **Konsequenzen:**
   - Platzhalter „Produktname offen / Arbeitstitel Habit Tracker" in README, PRD,
-    GLOSSARY, STATUS und ROADMAP durch „Kiumu" ersetzt. Repo-Codename
+    GLOSSARY, STATUS und ROADMAP durch „kiumu" ersetzt. Repo-Codename
     `habit-tracker` → `kiumu` umgestellt (noch kein Code → schmerzfrei).
     GitHub-Org/Handle `kiumu` sichern.
   - *Aussprache „kju-mu" konsequent vorgeben* (z. B. in README/Marketing), da ein
@@ -208,7 +208,7 @@
     - *Cumulus (direkt):* bedeutungsstark und atmosphärisch (Wolken-Optik der
       Habit-Ansicht, „accumulate"), aber generisch und SEO-überlaufen
       (Wetter-Software, US-Radio, Storage-Umfeld); `.com` weg, `.app` nur
-      geparkt/teuer zu kaufen. → Daher die Ableitung „Kiumu" statt „Cumulus" selbst.
+      geparkt/teuer zu kaufen. → Daher die Ableitung „kiumu" statt „Cumulus" selbst.
     - *Cumula:* `cumula.app` bereits von einer konkurrierenden Lern-App belegt —
       zu nahe am eigenen Feld.
     - *qmulo:* klanglich identisch zu **Qumulo**, einer ~346 Mio. $ schweren

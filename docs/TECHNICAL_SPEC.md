@@ -1,4 +1,4 @@
-# Technical Specification — Kiumu
+# Technical Specification — kiumu
 
 > *Womit* und *wie* wir bauen. Das *Was/Warum* steht im [PRD.md](PRD.md), die
 > Begründungen einzelner Technik-Entscheidungen in [DECISIONS.md](DECISIONS.md).

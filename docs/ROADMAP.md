@@ -1,4 +1,4 @@
-# Roadmap — Kiumu
+# Roadmap — kiumu
 
 > Die großen Phasen in Reihenfolge. Bewusst grob — Details und Tagesstand stehen in
 > [STATUS.md](STATUS.md), Begründungen in [DECISIONS.md](DECISIONS.md).
