@@ -36,7 +36,7 @@ Hintergrund: [docs/DECISIONS.md](docs/DECISIONS.md) → ADR-0007.
 ## Tech-Stack
 
 - **Sprache:** TypeScript (durchgängig).
-- **Web:** React über Next.js. **Deployment:** Vercel.
+- **Web:** React über Next.js (App Router) mit Tailwind CSS. **Deployment:** Vercel.
 - **Backend/DB/Auth:** Supabase (PostgreSQL).
 - **Mobile (später):** React Native (Expo), gleiches Supabase-Backend.
 
@@ -45,16 +45,27 @@ Datenmodell: [docs/TECHNICAL_SPEC.md](docs/TECHNICAL_SPEC.md).
 
 ## Setup & Befehle
 
-> ⏳ Wird ergänzt, sobald das Projekt gescaffoldet ist (noch kein Code-Repo).
-> Voraussichtlich Standard-Next.js-Befehle (`dev`, `build`, `lint`). Halte diesen
-> Abschnitt aktuell, sobald die Befehle existieren.
+Projekt ist mit Next.js, TypeScript, App Router, Tailwind CSS und ESLint
+gescaffoldet.
+
+- **Installation:** `npm install`
+- **Lokale Entwicklung:** `npm run dev`
+- **Production Build prüfen:** `npm run build`
+- **Linting:** `npm run lint`
+- **Production Server lokal starten:** `npm run start` (nach `npm run build`)
+
+App-Code liegt unter `src/app/`; Routen folgen dem Next.js-App-Router-Modell
+(`page.tsx`, `layout.tsx`). Imports können über den Alias `@/*` auf `src/*`
+zeigen.
 
 ## Code-Konventionen
 
 - **TypeScript strict.** Klare, sprechende Namen vor Cleverness.
 - **Verständlichkeit zuerst:** Code so schreiben, dass das zukünftige Ich ihn nach
   Monaten versteht.
-- Linting/Formatierung (ESLint/Prettier): wird beim Setup festgelegt und hier ergänzt.
+- **ESLint ist eingerichtet:** Vor Commits mindestens `npm run lint` ausführen.
+- **Styling:** Tailwind CSS ist eingerichtet; globale Styles liegen in
+  `src/app/globals.css`.
 - Vertikale Scheiben statt Schicht-für-Schicht — siehe
   [docs/WAYS_OF_WORKING.md](docs/WAYS_OF_WORKING.md).
 

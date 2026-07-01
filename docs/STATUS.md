@@ -8,20 +8,20 @@
 
 | | |
 |---|---|
-| **Letzte Aktualisierung** | 2026-06-30 |
+| **Letzte Aktualisierung** | 2026-07-01 |
 | **Aktuelle Phase** | Phase 0 — Fundament (siehe [ROADMAP.md](ROADMAP.md)) |
-| **Aktueller Branch** | – (noch kein Code-Repo initialisiert) |
+| **Aktueller Branch** | `main` |
 
 ---
 
 ## 🎯 Aktueller Fokus
 
-Die Grundsatzentscheidungen des Datenmodells (Kontobuch-Ansatz, berechneter Saldo) stehen. Der nächste Schritt ist das Finalisieren der **Felder und Spalten pro Tabelle**.
+Das Next.js-Scaffold steht: TypeScript, App Router, Tailwind CSS und ESLint sind eingerichtet. Der nächste Schritt ist, die generierte Startseite/Metadaten auf kiumu umzubauen und danach die **Felder und Spalten pro Tabelle** zu finalisieren.
 
 ## ⏭️ Nächste konkrete Schritte
 
-1. Felder/Spalten pro Tabelle finalisieren (Entitäten, Datentypen, Beziehungen).
-2. Projekt scaffolden (Next.js + TypeScript), Git/GitHub aufsetzen.
+1. Generierte Next.js-Startseite und Metadaten auf kiumu anpassen.
+2. Felder/Spalten pro Tabelle finalisieren (Entitäten, Datentypen, Beziehungen).
 3. Supabase-Projekt anlegen; Tabellen + Row Level Security für das Datenmodell.
 
 ## ❓ Offene Fragen (entscheiden, bevor sie blockieren)
@@ -30,7 +30,7 @@ Die Grundsatzentscheidungen des Datenmodells (Kontobuch-Ansatz, berechneter Sald
 
 ## 🚧 Bekannte Probleme / Stolpersteine
 
-- (Noch keine — es gibt noch keinen Code.)
+- Keine bekannten Projektprobleme; `npm run lint` und `npm run build` laufen erfolgreich.
 
 ---
 
@@ -38,6 +38,11 @@ Die Grundsatzentscheidungen des Datenmodells (Kontobuch-Ansatz, berechneter Sald
 
 > Pro Session ein kurzer Eintrag: erledigt / als Nächstes / offen. Das ist die
 > Brotkrumen-Spur, der dein zukünftiges Ich zurück in den Kontext folgt.
+
+### 2026-07-01 — Next.js-Scaffold
+- **Erledigt:** Next.js-App mit TypeScript, App Router, Tailwind CSS und ESLint erstellt. Struktur und Scripts geprüft; `npm run lint` und `npm run build` laufen erfolgreich.
+- **Als Nächstes:** Starter-UI/Metadaten auf kiumu anpassen, danach Datenmodell-Spalten finalisieren.
+- **Offen:** Visualisierung der Investition im UI.
 
 ### 2026-06-30 — Produktname „kiumu" (ADR-0011)
 - **Erledigt:** Arbeitstitel „Habit Tracker" / Repo-Codename `habit-tracker` in der Doku durch kiumu ersetzt (README, PRD, GLOSSARY, ROADMAP, TECHNICAL_SPEC, DESIGN, AGENTS, STATUS).
